@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biografi - Alip</title>
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #0f2027;
+      --text-light: #333;
+      --text-dark: #fff;
+      --accent: #00cec9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      transition: all 0.5s ease;
+      animation: fadeIn 1.2s ease-in;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+      background-size: 400% 400%;
+      animation: backgroundMove 15s ease infinite;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-20px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes backgroundMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      animation: slideDown 1s ease-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+      animation: slideDown 1s ease-out;
+    }
+
+    .typing {
+      color: #ccc;
+      height: 30px;
+      font-style: italic;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #ccc;
+      width: 100%;
+      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #aaa;
+      margin-top: 25px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: #fff;
+      background: #00b894;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      opacity: 0.9;
+    }
+
+    .btn.wa { background: #25D366; }
+    .btn.ig { background: #E1306C; }
+    .btn.tt { background: #010101; }
+    .btn.srv { background: #005B8F; }
+    .btn.gm { background: #FFC0CB; }
+
+
+
+
+    .mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    .mode-toggle:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+  <button class="mode-toggle" onclick="toggleMode()">☀️/🌙</button>
+
+  <div class="container" id="profile">
+    <center>
+      <img src="https://id.images.search.yahoo.com/images/view;_ylt=AwrPpkLcSThoyhM34nnNQwx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2U0M2JmMGY4MzIwMmMyYzhiOGFhOTBkNGE2NTQwODJkBGdwb3MDOARpdANiaW5n?back=https%3A%2F%2Fid.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dfoto%2Bprofil%2Bkeren%26type%3DE210ID91215G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D8&w=960&h=640&imgurl=blog-static.mamikos.com%2Fwp-content%2Fuploads%2F2022%2F06%2FFoto-Profil-WA-Keren_2.jpg&rurl=https%3A%2F%2Fmamikos.com%2Finfo%2Ffoto-profil-wa-keren-gnr%2F&size=25KB&p=foto+profil+keren&oid=e43bf0f83202c2c8b8aa90d4a654082d&fr2=piv-web&fr=mcafee&tt=10+Foto+Profil+WA+Keren+Buat+Cowok+dan+Cewek+yang+Cantik+%E2%80%93+Blog+Mamikos&b=0&ni=21&no=8&ts=&tab=organic&sigr=bvRAYlz9SDa2&sigb=yh6Ilu5ZAA5q&sigi=GOWR3EHgRcqy&sigt=2vf4ufbYW4zN&.crumb=Gk4Lm9LNaU1&fr=mcafee&fr2=piv-web&type=E210ID91215G0" alt="Foto Profil" class="profile-pic">
+      <h1>Muhamad Alip Rizqi Pramono</h1>
+      <div class="typing">Full-stack Developer • Linux Enthusiast • Lifelong Learner</div>
+    </center>
+
+    <div class="section">
+      <p>
+        Halo! Saya Alip, pengembang perangkat lunak yang suka membangun aplikasi dan sistem terbuka. Saya suka belajar, menulis kode, dan mengejar solusi teknologi yang efektif dan efisien.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🔧 Keterampilan</h2>
+      <p>Seni, Linux Server, Game</p>
+    </div>
+
+    <div class="section">
+      <h2>🎓 Pendidikan</h2>
+      <p>SMK Negeri 1 Nglipar</p>
+    </div>
+
+    <div class="section">
+      <h2>📫 Kontak</h2>
+      <p>Email: <a href="mailto:kikipramono999@google.com">kikipramono999@gmail.com</a></p>
+    </div>
+
+    <div class="social-buttons">
+      <a href="https://wa.me/6288980454337" class="btn wa" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/prto.rizz" class="btn ig" target="_blank">Instagram</a>
+      <a href="https://tiktok.com/@partoanakbaik" class="btn tt" target="_blank">TikTok</a>
+      <a href="http://serveralip.id:5000" class="btn srv" target="_blank">Server</a>
+      <a href="tetris.game" class="btn gm" target="_blank">Game</a>
+
+
+    </div>
+
+    <div class="tagline">"Menulis kode adalah seni, dan setiap barisnya adalah karya."</div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const dark = getComputedStyle(body).getPropertyValue('--bg-dark').trim();
+      if (body.style.backgroundColor === dark || body.classList.contains('dark')) {
+        // Switch to light mode
+        body.style.setProperty('--bg-dark', '#f4f4f4');
+        body.style.setProperty('--text-dark', '#222');
+        body.style.background = '#f4f4f4';
+        body.classList.remove('dark');
+      } else {
+        // Switch back to dark mode
+        body.style.setProperty('--bg-dark', '#0f2027');
+        body.style.setProperty('--text-dark', '#fff');
+        body.style.background = 'linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027)';
+        body.classList.add('dark');
+      }
+    }
+  </script>
+</body>
+</html>
+
